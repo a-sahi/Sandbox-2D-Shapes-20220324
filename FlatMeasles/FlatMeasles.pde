@@ -1,10 +1,10 @@
 //Global Variables
+int smallerDisplayDimension;
 float rectFaceX, rectFaceY, rectFaceWidth, rectFaceHeight;
 float faceX, faceY, faceDiameter;
 float leftEyeX, leftEyeY, rightEyeX, rightEyeY, eyeDiameter;
 //
 //Display Geometry
-int smallerDisplayDimension;
 fullScreen();
 //Landscape, not square or portrait
 println (width, height, displayWidth, displayHeight); //Verification of values
@@ -31,11 +31,15 @@ rectFaceHeight = smallerDisplayDimension; //Square Shape
 faceX = displayWidth*1/2;
 faceY = displayHeight*1/2;
 faceDiameter = smallerDisplayDimension;
-leftEyeX = displayWidth*1.4/4;
-rightEyeX = displayWidth*2.6/4;
+leftEyeX = displayWidth*3/8;
+rightEyeX = displayWidth*5/8;
 leftEyeY = displayHeight*1/4;
 rightEyeY = leftEyeY; //Best Practice: change one line of code
 eyeDiameter = smallerDisplayDimension*1/4;
+mouthX1 = leftEyeX;
+mouthY1 = displayWidth*3/4;
+mouthX2 = rightEyeX;
+mouthY2 = mouthY1;
 //
 //Face: Circle = Inscribing a Circle in a Square
 //Center a circle on display orientation
@@ -55,6 +59,7 @@ ellipse(rightEyeX, rightEyeY, eyeDiameter, eyeDiameter);
 //
 //Mouth
 //rect();
+line(mouthX1, mouthY1, mouthX2, mouthY2);
 //
 //Measle
 //rect();
