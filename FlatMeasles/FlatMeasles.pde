@@ -1,6 +1,7 @@
 //Global Variables
 float rectFaceX, rectFaceY, rectFaceWidth, rectFaceHeight;
 float faceX, faceY, faceDiameter;
+float leftEyeX, leftEyeY, rightEyeX, rightEyeY, eyeDiameter;
 //
 //Display Geometry
 int smallerDisplayDimension;
@@ -30,6 +31,11 @@ rectFaceHeight = smallerDisplayDimension; //Square Shape
 faceX = displayWidth*1/2;
 faceY = displayHeight*1/2;
 faceDiameter = smallerDisplayDimension;
+leftEyeX = displayWidth*1.4/4;
+rightEyeX = displayWidth*2.6/4;
+leftEyeY = displayHeight*1/4;
+rightEyeY = leftEyeY; //Best Practice: change one line of code
+eyeDiameter = smallerDisplayDimension*1/4;
 //
 //Face: Circle = Inscribing a Circle in a Square
 //Center a circle on display orientation
@@ -38,9 +44,11 @@ ellipse(faceX, faceY, faceDiameter, faceDiameter);
 //
 //Left Eye
 //rect();
+ellipse(leftEyeX, leftEyeY, eyeDiameter, eyeDiameter);
 //
 //Right Eye
 //rect();
+ellipse(rightEyeX, rightEyeY, eyeDiameter, eyeDiameter);
 //
 //Nose
 //rect();
