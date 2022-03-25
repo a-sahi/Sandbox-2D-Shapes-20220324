@@ -17,15 +17,13 @@ if ( orientation=="Landscape or Square" ) {
   println("Turn your phun"); //FUN
 }
 */
-
-
-
 //
 //Variable Population
 //
 //Face
 //Center a circle on display orientation
-rect();
+rect(rectFaceX, rectFaceY, rectFaceWidth, rectFaceHeight);
+ellipse(faceX, faceY, faceDiameter, faceDiameter);
 //
 //Left Eye
 //rect();
