@@ -1,9 +1,10 @@
 //Global Variables
-int smallerDisplayDimension;
+int smallerDisplayDimension, mouthOpen;
 float rectFaceX, rectFaceY, rectFaceWidth, rectFaceHeight;
 float faceX, faceY, faceDiameter;
 float leftEyeX, leftEyeY, rightEyeX, rightEyeY, eyeDiameter;
 float mouthX1, mouthY1, mouthX2, mouthY2;
+float xNose1, yNose1, xNose2, yNose2, xNose3, yNose3;
 //
 //Display Geometry
 fullScreen();
@@ -41,12 +42,13 @@ mouthX1 = leftEyeX;
 mouthY1 = displayHeight*3/4;
 mouthX2 = rightEyeX;
 mouthY2 = mouthY1;
-xNose1 = ;
-yNose1 = ;
-xNose2 = ;
-yNose2 = ;
-xNose3 = ;
-yNose3 = ;
+mouthOpen = smallerDisplayDimension*1/4;
+xNose1 = faceX;
+yNose1 = leftEyeY;
+xNose2 = faceX - leftEyeY*1/2;
+yNose2 = faceY;
+xNose3 = faceX + leftEyeY*1/2;
+yNose3 = faceY;
 //
 //Face: Circle = Inscribing a Circle in a Square
 //Center a circle on display orientation
@@ -67,7 +69,9 @@ triangle(xNose1, yNose1, xNose2, yNose2, xNose3, yNose3);
 //
 //Mouth
 //rect();
+strokeWeight(mouthOpen); //testing: 100=400/4, mouthOpen=height*1/4
 line(mouthX1, mouthY1, mouthX2, mouthY2);
 //
 //Measle
 //rect();
+//ellipse(); //random values given other variables (similar to button code)
