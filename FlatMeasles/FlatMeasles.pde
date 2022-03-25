@@ -3,6 +3,7 @@ float rectFaceX, rectFaceY, rectFaceWidth, rectFaceHeight;
 float faceX, faceY, faceDiameter;
 //
 //Display Geometry
+int smallerDisplayDimension;
 fullScreen();
 //Landscape, not square or portrait
 println (width, height, displayWidth, displayHeight); //Verification of values
@@ -21,13 +22,14 @@ if ( orientation=="Landscape or Square" ) {
 */
 //
 //Variable Population
-rectFaceX = width*0;
-rectFaceY = height*0;
-rectFaceWidth = width;
-rectFaceHeight = height;
-faceX = width*1/2;
-faceY = height*1/2;
-//faceDiameter = ;
+smallerDisplayDimension = displayHeight; //ALWAYS in Landscape
+rectFaceX = (displayWidth*1/2) - (smallerDisplayDimension*1/2);
+rectFaceY = displayHeight*0;
+rectFaceWidth = smallerDisplayDimension; //Square Shape
+rectFaceHeight = smallerDisplayDimension; //Square Shape
+faceX = displayWidth*1/2;
+faceY = displayHeight*1/2;
+faceDiameter = smallerDisplayDimension;
 //
 //Face: Circle = Inscribing a Circle in a Square
 //Center a circle on display orientation
