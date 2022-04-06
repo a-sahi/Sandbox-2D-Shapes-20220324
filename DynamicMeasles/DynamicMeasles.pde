@@ -31,8 +31,8 @@ void setup()
    println("Turn your phun"); //FUN
    }
    */
-   //
-   //Variable Population: notice using appWidth & appHeight to move between size() & fullScreen()
+  //
+  //Variable Population: notice using appWidth & appHeight to move between size() & fullScreen()
   smallerDisplayDimension = appHeight; //ALWAYS in Landscape
   reset = smallerDisplayDimension / smallerDisplayDimension; //returns "1"
   rectFaceX = (appWidth*1/2) - (smallerDisplayDimension*1/2);
@@ -64,21 +64,6 @@ void setup()
   rect(rectFaceX, rectFaceY, rectFaceWidth, rectFaceHeight);
   ellipse(faceX, faceY, faceDiameter, faceDiameter);
   //
-}//End setup
-//
-void draw() {
-}//End draw
-//
-void keyPressed() {
-}//End keyPressed
-//
-void mousePressed() {
-}//End mousePressed
-//
-//End Main Program
-   
- 
- 
   //Left Eye
   rect(leftEyeX-eyeDiameter*1/2, leftEyeY-eyeDiameter*1/2, eyeDiameter, eyeDiameter);
   ellipse(leftEyeX, leftEyeY, eyeDiameter, eyeDiameter);
@@ -101,7 +86,10 @@ void mousePressed() {
   //comparison rect() line only, no caps, no strokeWeight
   rect(mouthX1, mouthY1, mouthWidth, mouthHeight);
   //
-  //
+}//End setup
+//
+void draw() 
+{
   //Measle
   float measleDiameter = random( smallerDisplayDimension*1/100, smallerDisplayDimension*1/25); //Range of measle size: small=*1/100, large=4xbigger (*1/25)
   float measleRadius = measleDiameter*1/2;
@@ -112,10 +100,23 @@ void mousePressed() {
   color measleColour = ( nightMode==false ) ? color( 255, random(0, 50), random(120) ) : color( 255, random(0, 50), 0 ) ; //ternary operator for day:night
   color whiteReset=#000000;
   //
-  //rect();
+  float measleRectX = measleX-measleDiameter*1/2;
+  float measleRectY = measleY-measleDiameter*1/2;
+  float measleWidth = measleDiameter;
+  float measleHeight = measleDiameter;
+  rect( measleRectX, measleRectY, measleWidth, measleHeight );
   //random values given other variables (similar to button code)
   noStroke(); //Shape outline
   fill(measleColour); 
   ellipse( measleX, measleY, measleDiameter, measleDiameter ); 
   stroke(reset); //reset to 1 pixel
   fill(whiteReset); //reset to first colour (i.e. blackReset)
+}//End draw
+//
+void keyPressed() {
+}//End keyPressed
+//
+void mousePressed() {
+}//End mousePressed
+//
+//End Main Program
