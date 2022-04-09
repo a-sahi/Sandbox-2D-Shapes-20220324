@@ -20,10 +20,24 @@ void population() {
   mouthY2 = mouthY1;
   mouthOpen = smallerDisplayDimension*1/4;
   xNose1 = faceX;
-  yNose1 = leftEyeY;
+  yNose1 = leftEyeY+90;
   xNose2 = faceX - leftEyeY*1/2;
-  yNose2 = faceY;
+  yNose2 = faceY+90;
   xNose3 = faceX + leftEyeY*1/2;
-  yNose3 = faceY;
+  yNose3 = faceY+90;
+  pic1 = loadImage ("nose.png");
+  float imageWidthRatio1 = 1200.0/1200.0;
+  float imageHeightRatio1 = 1429.0/1200.0;
+  imageX1 = xNose1-180;
+  imageY1 = yNose1;
+  imageWidth1 = (width*imageWidthRatio1)*1/5;
+  imageHeight1 = (height*imageHeightRatio1)*1/5;
+  pic = loadImage ("imageofmouth.png");
+  float imageWidthRatio = 3001.0/3001.0;
+  float imageHeightRatio = 2068.0/3001.0;
+  imageX = (xNose2*3/4)+20;
+  imageY = appHeight*3/5;
+  imageWidth = (width*imageWidthRatio)/3;
+  imageHeight = (height*imageHeightRatio)/3;
   //
 }//End population

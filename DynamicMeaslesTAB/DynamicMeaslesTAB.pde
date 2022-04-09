@@ -6,6 +6,10 @@ Boolean nightMode=false;
 //
 float eyeDiameter;
 //
+float imageX, imageY, imageWidth, imageHeight;
+float imageX1, imageY1, imageWidth1, imageHeight1;
+PImage pic;
+PImage pic1;
 void setup() 
 {
   fullScreen();
@@ -16,10 +20,10 @@ void setup()
 //
 void draw() 
 {
-  measleDraw();
   leftEyeDraw();
   rightEyeDraw();
   noseDraw();
+  measleDraw();
   mouthDraw();
 }//End draw
 //
