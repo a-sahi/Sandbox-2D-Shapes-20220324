@@ -7,8 +7,8 @@ void measleDraw() {
   //Measle
   measleDiameter = random( smallerDisplayDimension*1/100, smallerDisplayDimension*1/25); //Range of measle size: small=*1/100, large=4xbigger (*1/25)
   measleRadius = measleDiameter*1/2;
-  measleX = random( rectFaceX+measleRadius, (( rectFaceX+rectFaceWidth ) - measleRadius ) );
-  measleY = random( rectFaceY+measleRadius, (( rectFaceY+rectFaceHeight ) - measleRadius ) );
+  measleX = random( faceX-(faceDiameter/2)-measleRadius, faceX+(faceDiameter/2)-measleRadius );
+  measleY = random( faceY-(faceDiameter/2)-measleRadius, faceY+(faceDiameter/2)-measleRadius );
   nightMode=false; //Note: IF-ELSE is similar to ternary operator
   measleColour = ( nightMode==false ) ? color( 255, random(0, 50), random(120) ) : color( 255, random(0, 50), 0 ) ; //ternary operator for day:night
   whiteReset=#FFFFFF;

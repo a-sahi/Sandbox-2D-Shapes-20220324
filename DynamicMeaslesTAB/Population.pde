@@ -25,9 +25,9 @@ void population() {
   yNose2 = faceY+90;
   xNose3 = faceX + leftEyeY*1/2;
   yNose3 = faceY+90;
-  pic1 = loadImage ("nose.png");
-  float imageWidthRatio1 = 1200.0/1200.0;
-  float imageHeightRatio1 = 1429.0/1200.0;
+  pic1 = loadImage ("toppng.com-human-nose-1226x1641.png");
+  float imageWidthRatio1 = 638.0/638.0;
+  float imageHeightRatio1 = 854.0/638.0;
   imageX1 = xNose1-180;
   imageY1 = yNose1;
   imageWidth1 = (width*imageWidthRatio1)*1/5;

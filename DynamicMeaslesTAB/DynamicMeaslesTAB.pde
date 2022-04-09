@@ -20,10 +20,10 @@ void setup()
 //
 void draw() 
 {
+  measleDraw();
   leftEyeDraw();
   rightEyeDraw();
   noseDraw();
-  measleDraw();
   mouthDraw();
 }//End draw
 //
