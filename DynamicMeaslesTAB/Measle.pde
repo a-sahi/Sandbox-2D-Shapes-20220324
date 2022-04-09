@@ -19,10 +19,13 @@ void measleDraw() {
   measleHeight = measleDiameter;
   //rect( measleRectX, measleRectY, measleWidth, measleHeight );
   //random values given other variables (similar to button code)
+  if(((measleX-faceX)*(measleX-faceX))+((measleY-faceY)*(measleY-faceY)) <((faceDiameter/2)*(faceDiameter/2)))
+  {
   noStroke(); //Shape outline
   fill(measleColour); 
   ellipse( measleX, measleY, measleDiameter, measleDiameter ); 
   stroke(reset); //reset to 1 pixel
   fill(whiteReset); //reset to first colour (i.e. blackReset)
   //
+  }
 }//End measleDraw

@@ -6,5 +6,7 @@ void faceSetup() {
   //Face: Circle = Inscribing a Circle in a Square
   //Center a circle on display orientation
   //rect(rectFaceX, rectFaceY, rectFaceWidth, rectFaceHeight);
-  ellipse(faceX, faceY, faceDiameter-40, faceDiameter);
+  strokeWeight(35);
+  ellipse(faceX, faceY, faceDiameter, faceDiameter);
+  strokeWeight(reset);
 }//End faceSetup
