@@ -39,5 +39,8 @@ void population() {
   imageY = appHeight*3/5;
   imageWidth = (width*imageWidthRatio)/3;
   imageHeight = (height*imageHeightRatio)/3;
+  int centerX = appWidth*1/2;
+  int centerY = appHeight*1/2;
+  quitButtonSetupPopulation(centerX, centerY);
   //
 }//End population

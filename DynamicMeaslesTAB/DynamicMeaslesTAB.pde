@@ -13,6 +13,7 @@ PImage pic1;
 void setup() 
 {
   fullScreen();
+  displayOrientation();
   displaySetup();
   population();
   faceSetup();
@@ -21,16 +22,21 @@ void setup()
 void draw() 
 {
   measleDraw();
+  quitButtonDraw();
   leftEyeDraw();
   rightEyeDraw();
   noseDraw();
   mouthDraw();
 }//End draw
 //
-void keyPressed() {
+void keyPressed() 
+{
+  quitButtonKeyPressed();
 }//End keyPressed
 //
-void mousePressed() {
+void mousePressed() 
+{
+  quitButtonMousePressed();
 }//End mousePressed
 //
 //End Main Program
