@@ -1,6 +1,6 @@
 //Global Variables
 float quitButtonX, quitButtonY, quitButtonWidth, quitButtonHeight;
-color yellow=#FFFF00, purple=#FF00FF, buttonColour; //Notice NightMode Blue Values
+color lightpink=#F0A2EB, darkpink=#F22CE5, buttonColour; //Notice NightMode Blue Values
 //
 void quitButtonSetupPopulation(int centerX, int centerY) { //ignore Parameter concept
   quitButtonX = 30; //1/4 on one-half, 1/4 on other half
